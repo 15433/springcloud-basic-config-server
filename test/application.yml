@@ -1,0 +1,23 @@
+spring:
+  rabbitmq:
+    host: ${RABBIT_HOST:rabbitmq}
+    port: ${RABBIT_PORT:5672}
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+    database: ${REDIS_DATABASE:2}
+    pool:
+      max-wait: 30000
+      # max-active: 30
+    timeout: 20000
+  data:
+    mongodb:
+      uri: ${MONGO_URL:mongodb://test:test@127.0.0.1:37017/test}
+  mvc:
+    servlet:
+      load-on-startup: 1
+
+pagehelper.auto-runtime-dialect: true
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
